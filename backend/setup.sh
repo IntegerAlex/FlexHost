@@ -18,13 +18,13 @@ sudo ufw allow 22
 sudo ufw enable
 
 # Get SSL certificate using certbot (assuming it's installed)
-sudo apt-get install certbot -y
+sudo apt-get install python3-certbot-nginx
 
 # If certbot is not installed, you can install it using:
 # sudo snap install --classic certbot
 
 # Obtain SSL certificate for the domain (replace 'example.com' with your domain)
-sudo certbot --nginx -d ${1} -d ${1}
+sudo certbot --nginx -d ${1} -d www.${1}
 
 # Note: The above command will prompt you for email and agree to terms before obtaining the certificate.
 
