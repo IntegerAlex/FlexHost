@@ -24,7 +24,10 @@ app.get('/deploy' , async(req,res)=>{
 
 
 
-
+app.get('/deployments', async(req,res)=>{
+	const result = projects
+	res.json(result)
+}	)
 
 app.listen(PORT , ()=>{	
     console.log(`server started at port ${PORT}`) 
