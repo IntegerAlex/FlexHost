@@ -26,7 +26,7 @@ function deploy(link, folder, port) {
                     reject(err);
                 }
                 if (stdout) {
-                    const filename = `test.txt`;
+                    const filename = "test.txt";
                     promises_1.default.writeFile(filename, stdout).then(() => {
                         if (err) {
                             console.log(err);

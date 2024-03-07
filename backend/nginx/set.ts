@@ -21,7 +21,7 @@ export async function generateNginxConfig() {
         const nginxConfig = mustache.render(template, { projects });
     
         // 4. Write the generated configuration
-        await fs.writeFile(`/etc/nginx/nginx.conf`, nginxConfig);
+        await fs.writeFile("/etc/nginx/nginx.conf", nginxConfig);
     
         // 5. Reload Nginx 
         exec('sudo systemctl reload nginx', (error, stdout, stderr) => {
