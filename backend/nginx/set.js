@@ -30,7 +30,7 @@ function generateNginxConfig() {
             // 3. Render the template
             const nginxConfig = mustache_1.default.render(template, { projects: exports.projects });
             // 4. Write the generated configuration
-            yield promises_1.default.writeFile(`/etc/nginx/nginx.conf`, nginxConfig);
+            yield promises_1.default.writeFile("/etc/nginx/nginx.conf", nginxConfig);
             // 5. Reload Nginx 
             (0, child_process_1.exec)('sudo systemctl reload nginx', (error, stdout, stderr) => {
                 if (error) {

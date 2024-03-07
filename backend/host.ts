@@ -13,7 +13,7 @@ export function deploy(link:string , folder:string ,port:number):Promise<any>{
 					reject(err)
 				}
 				if(stdout){
-					const filename:string = `test.txt`
+					const filename:string = "test.txt"
 					fs.writeFile(filename, stdout).then(()=>{
 						if(err){
 							console.log(err)
